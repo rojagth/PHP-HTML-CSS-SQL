@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Readme - Experimentální Databáze</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Readme - Informace o Projektu</h1>
+	<nav>
+            <ul>
+                <li><a href="index.php">Domů</a></li>
+                <li><a href="add_data.php">Přidat Data</a></li>
+                <li><a href="readme.html">Readme</a></li>
+                <li><a href="report.php">Report</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <section>
+            <h2>Popis Projektu</h2>
+            <p>Tento projekt je zaměřen na správu a analýzu experimentálních dat shromážděných z různých vědeckých studií. Databáze obsahuje celkově 6 tabulek (viz. obr. níže). Vazba M:N je mezi tabulkou scientist a experiments. Jako povinně volitelné funkce projektu byly vybrány využití poddotazu (subquery) a zobrazení obrázku, který není v souboru, ale přímo v BLOBu v databázi. V kódu jsou použity parametrizované dotazy (prepare a bind_param), což pomáhá zabránit SQL injection útokům tím, že odděluje data od SQL dotazů a nepřímo zakazuje vkládání SQL kódu do uživatelských vstupů.</p>
+	    <br>
+	    <p>Tento web obsahuje celkově 4 webové stránky:</p>
+	    <ul>
+  		<li><b>Domů</b> - obsahuje uložené prvky do databáze</li>
+  		<li><b>Přidat data</b> - umožňuje přidat data do databáze pomocí formulářů</li>
+  		<li><b>Readme</b> - info o projektu</li>
+  		<li><b>Report</b> - agregační dotaz mezi tabulkami scientist a experiments (celkový počet experimentů pro každého vědce); využití poddotazu (subquery); zobrazení obrázku, který není v souboru, ale přímo v BLOBu v databázi</li>
+	    </ul>
+        </section>
+     
+        <section>
+            <h2>ER Diagram Projektu</h2>
+            <p>Zde je zobrazen ER diagram, který ilustruje strukturu databáze a vztahy mezi tabulkami:</p>
+            <img src="https://mrkev.fme.vutbr.cz/~m217578/projekt/erd.png" alt="ER Diagram" style="max-width:100%;height:auto;">
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Experimentální Databáze.</p>
+    </footer>
+</body>
+</html>
